@@ -37,24 +37,20 @@ actor {
     };
 
     // Challenge 4
-    public func nat_opt_to_nat(n: ?Nat, m: Nat) : async Text {
-        switch(n) {
-            case(null) {
-                return (Nat.toText(m));
-            };
-            case (?something) {
-                return (Nat.toText(something));
-            };
+     public func nat_opt_to_nat(n: ?Nat, m: Nat) : async ?Nat {
+        if (n == null) {
+            return ?m;
         };
+        return n;
     };
 
     // Challenge 5
-    public func day_of_the_week(n: Nat) : async Text {
+    public func day_of_the_week(n: Nat) : async ?Text {
         let days : [Text] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
         if (n > 0 and n < 8) {
-            return days[n - 1];
+            return ?days[n - 1];
         } else {
-            return "null";
+            return null;
         };
     };
 
