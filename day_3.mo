@@ -85,11 +85,21 @@ actor {
 
     // Challenge 10
     private func contains<A>(xs: [A], a: A, f : (A, A) -> Bool) : Bool {
-        for (x in xs.vals()) {
-            if (x == a) {
+        var i = 0;
+        while (i < xs.size()) {
+            if (f(xs[i], a)) {
                 return true;
             };
+            i += 1;
         };
-        return false;
+
+        return false
+    };
+
+    // Test of Challenge 10 // Works
+    public func _contains(a: [Text], c: Text) : async Bool {
+        return contains<Text>(a, c, func (_a, c) {
+            return (_a == c);
+        });
     };
 };
