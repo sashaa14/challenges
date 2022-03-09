@@ -23,8 +23,8 @@ module {
             case (?(i, null)) {
                 return ?i;
             };
-            case (?(_, item)) {
-                return last<T>(item);
+            case (?(_, r)) {
+                return last<T>(r);
             };
         };
     };
