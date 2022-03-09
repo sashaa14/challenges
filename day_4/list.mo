@@ -59,5 +59,20 @@ module {
         };
     };
 
+    // Challenge 11
+    public func reverse(l : List) : List {
+        func rev(l : List, r: List) : List {
+            switch (l) {
+                case (null) {
+                    return r;
+                };
+                case(?(h, t)) {
+                    return rev(t, ?(h, r))
+                };
+            };
+        };
+        rev(l, null);
+    };
+
 
 }
