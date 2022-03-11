@@ -11,6 +11,14 @@
     "day_3": {
       "main": "day_3.mo",
       "type": "motoko"
+    },
+    "day_4": {
+      "main": "./day_4/main.mo",
+      "type": "motoko"
+    },
+    "day_5": {
+      "main": "day_5.mo",
+      "type": "motoko"
     }
   },
   "defaults": {
