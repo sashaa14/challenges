@@ -20,6 +20,14 @@
       "main": "day_5.mo",
       "type": "motoko"
     },
+    "day_5_withdraw": {
+      "main": "day_5_withdraw.mo",
+      "type": "motoko"
+    },
+    "day_5_withdraw2": {
+      "main": "day_5_deposit.mo",
+      "type": "motoko"
+    },
     "day_5-1": {
       "main": "day_5-1.mo",
       "type": "motoko"

@@ -9,8 +9,7 @@ actor {
 
     // Challenge 1
     public shared({caller}) func is_anonymous() : async Bool {
-        // return Principal.isAnonymous(caller);
-        return false;
+        return (Principal.toText(caller) == "2vxsx-fae");
     };
 
     // Challenge 2
@@ -84,14 +83,12 @@ actor {
 
     public query func getVersionNumber() : async Nat {
         _v;
-    }
+    };
 
     system func preupgrade() {
         // Logic before upgrade
         _v += 1;
     };
-
-    // Challenge 9
 
 
 };
